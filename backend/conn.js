@@ -3,8 +3,8 @@ require('dotenv').config();
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root', // Replace with your MySQL username
-    password: 'Mysql', // Replace with your MySQL password
+    user: 'root', 
+    password: 'Mysql', 
     database: 'blog_db'
 });
 

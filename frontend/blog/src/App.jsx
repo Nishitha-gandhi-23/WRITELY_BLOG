@@ -11,14 +11,12 @@ const App = () => {
   return (
     <Router>
       <Header />
-      {/* <main className="p-6"> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blogs" element={<BlogPage />} />
         <Route path="/add-blog" element={<AddBlogPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
-      {/* </main> */}
       <Footer />
     </Router>
   );

@@ -6,7 +6,7 @@ const AddBlogPage = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [image, setImage] = useState('');
-    const navigate = useNavigate(); // Initialize navigation
+    const navigate = useNavigate(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,12 +22,10 @@ const AddBlogPage = () => {
 
             if (response.ok) {
                 alert('Blog added successfully!');
-                // Clear form fields
                 setAuthor('');
                 setTitle('');
                 setContent('');
                 setImage('');
-                // Redirect to blogs page
                 navigate('/blogs');
             } else {
                 alert('Failed to add blog.');

@@ -19,8 +19,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-            {/* Why Writely Section */}
             <section className="py-16 bg-gray-850 text-center">
                 <h2 className="text-4xl font-bold mb-10 text-blue-800">Why Writely?</h2>
                 <div className="space-y-6 max-w-4xl mx-auto">
@@ -32,7 +30,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Call to Action */}
             <section className="py-12 bg-gray-950 text-center">
                 <h3 className="text-2xl font-semibold mb-6 text-blue-400">Find out who we are and why we do what we do.</h3>
                 <Link to="/about" className="bg-blue-100 font-semibold text-gray-900 px-8 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition duration-300">

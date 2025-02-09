@@ -8,7 +8,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Create a blog post
 app.post('/api/blogs', (req, res) => {
     const { title, content } = req.body;
     const sql = 'INSERT INTO blogs (title, content) VALUES (?, ?)';
@@ -18,7 +17,6 @@ app.post('/api/blogs', (req, res) => {
     });
 });
 
-// Get all blog posts
 app.get('/api/blogs', (req, res) => {
     db.query('SELECT * FROM blogs', (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
@@ -26,7 +24,6 @@ app.get('/api/blogs', (req, res) => {
     });
 });
 
-// Get a single blog post
 app.get('/api/blogs/:id', (req, res) => {
     const sql = 'SELECT * FROM blogs WHERE id = ?';
     db.query(sql, [req.params.id], (err, result) => {
@@ -36,7 +33,6 @@ app.get('/api/blogs/:id', (req, res) => {
     });
 });
 
-// Update a blog post
 app.put('/api/blogs/:id', (req, res) => {
     const { title, content } = req.body;
     const sql = 'UPDATE blogs SET title = ?, content = ? WHERE id = ?';
@@ -46,7 +42,6 @@ app.put('/api/blogs/:id', (req, res) => {
     });
 });
 
-// Delete a blog post
 app.delete('/api/blogs/:id', (req, res) => {
     const sql = 'DELETE FROM blogs WHERE id = ?';
     db.query(sql, [req.params.id], (err, result) => {
